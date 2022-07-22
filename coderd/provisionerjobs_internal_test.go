@@ -28,7 +28,7 @@ func TestProvisionerJobLogs_Unit(t *testing.T) {
 
 	t.Run("QueryPubSubDupes", func(t *testing.T) {
 		ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
-		t.Cleanup(cancel)
+		defer cancel()
 		logger := slogtest.Make(t, nil).Leveled(slog.LevelDebug)
 		// mDB := mocks.NewStore(t)
 		fDB := databasefake.New()
@@ -40,7 +40,7 @@ func TestProvisionerJobLogs_Unit(t *testing.T) {
 		}
 		api := New(&opts)
 		server := httptest.NewServer(api.Handler)
-		t.Cleanup(server.Close)
+		defer server.Close()
 		userID := uuid.New()
 		keyID, keySecret, err := generateAPIKeyIDSecret()
 		require.NoError(t, err)
