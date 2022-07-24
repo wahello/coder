@@ -132,13 +132,10 @@ require (
 	k8s.io/utils v0.0.0-20220210201930-3a6ce19ff2f9
 	nhooyr.io/websocket v1.8.7
 	storj.io/drpc v0.0.33-0.20220622181519-9206537a4db7
-	tailscale.com v1.26.2
+	tailscale.com v1.28.0
 )
 
-require (
-	github.com/coder/flog v1.0.0 // indirect
-	github.com/googleapis/enterprise-certificate-proxy v0.1.0 // indirect
-)
+require github.com/googleapis/enterprise-certificate-proxy v0.1.0 // indirect
 
 require (
 	github.com/Azure/go-ansiterm v0.0.0-20210617225240-d185dfc1b5a1 // indirect
