@@ -338,7 +338,7 @@ jobs:
       - changes
       - pr-context
     if: >
-      needs.changes.outputs.docs-only == 'false' &&
+      needs.changes.outputs.go == 'true' &&
       !contains(needs.pr-context.outputs.skips, 'test/go/postgres')
     runs-on: ubuntu-latest
     # This timeout must be greater than the timeout set by `go test` in
