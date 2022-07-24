@@ -248,7 +248,7 @@ jobs:
   test-go:
     name: "test/go"
     needs: changes
-    if: needs.changes.outputs.just-docs == 'false'
+    if: needs.changes.outputs.go == 'true'
     runs-on: ${{ matrix.os }}
     timeout-minutes: 20
     strategy:
@@ -521,7 +521,7 @@ jobs:
   test-js:
     name: "test/js"
     needs: changes
-    if: needs.changes.outputs.just-docs == 'false'
+    if: needs.changes.outputs.js == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
