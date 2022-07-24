@@ -38,6 +38,7 @@ jobs:
       just-go: ${{ steps.filter.outputs.go_count == steps.filter.outputs.all_count }}
       go: ${{ steps.filter.outputs.go }}
       sh: ${{ steps.filter.outputs.sh }}
+      js: ${{ steps.filter.outputs.js }}
     steps:
       - uses: actions/checkout@v3
       # For pull requests it's not necessary to checkout the code
