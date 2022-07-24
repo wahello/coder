@@ -596,7 +596,7 @@ jobs:
           path: |
             **/node_modules
             .eslintcache
-          key: js-${{ runner.os }}-e2e-${{ hashFiles('**/yarn.lock') }}
+          key: js-${{ runner.os }}-e2e-${{ hashFiles('**/yarn.lock', ''.github/workflows/**', '**playwright**') }}
 
       # Go is required for uploading the test results to datadog
       - uses: actions/setup-go@v3
