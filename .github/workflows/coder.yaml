@@ -64,7 +64,6 @@ jobs:
               - "**.s?css"
               - "**.json"
               - "**.lock"
-              - "site/**"
       - id: debug
         run: |
           echo "${{ toJSON(steps.filter )}}"
